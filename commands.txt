@@ -1,0 +1,252 @@
+pwd - states current directory
+ls - list files in the directory
+ls -l - long form list
+ls -a - lists hidden files as well
+cd . -change to current directory
+cd .. -change to parent directory
+cd folder_name - change to named directory
+mkdir new_direcotyr_name -creates a directory with this name
+rm directory_name - removes an empty directory, or deletes it
+rm -rf directory_name - deletes a directory and its contents
+touch filename.exstention - creates a new file
+mv index.html new_name_index.html - changes file name
+     can also move a file
+mv index.html ../index.html - moves it into its parent directory
+cp index.html copy.html - copies a file
+cp -rf directory_name copy_directory_name -copies a whole directory
+open . - opens in the gui
+sudo - Super USER PREFIX
+defaults write com.apple.finder AppleShowAllFiles YES
+
+Last login: Mon May 23 10:14:07 on ttys000
+[09:58:15] ~
+// ♥ pwd
+/Users/mathengel
+[09:58:23] ~
+// ♥ cd ..
+[09:58:29] Users
+// ♥ cd ..
+[09:58:31] /
+// ♥ cd ..
+[09:58:33] /
+// ♥ cd Users
+[09:58:47] Users
+// ♥ cd mathengel
+[09:58:53] ~
+// ♥ pwd
+/Users/mathengel
+[09:58:55] ~
+// ♥ cd desktop
+[09:59:01] desktop
+// ♥ pwd
+/Users/mathengel/desktop
+[09:59:03] desktop
+// ♥ mkdir test
+[09:59:23] desktop
+// ♥ ls
+Desktop 5.15.16
+IMG_1257.JPG
+IMG_1258.JPG
+IMG_2504.JPG
+brita price is right - Google Search.htm
+brita price is right - Google Search_files
+test
+[09:59:25] desktop
+// ♥ cd test
+[10:00:09] test
+// ♥ mv index.html
+usage: mv [-f | -i | -n] [-v] source target
+       mv [-f | -i | -n] [-v] source ... directory
+[10:00:18] test
+// ♥ ls
+[10:00:24] test
+// ♥ touch index.html
+[10:00:52] test
+// ♥ touch styles.css
+[10:00:58] test
+// ♥ touch commands.text
+[10:01:05] test
+// ♥ commands.txt
+-bash: commands.txt: command not found
+[10:01:10] test
+// ♥ touch commands.txt
+[10:01:16] test
+// ♥ ls
+commands.text	commands.txt	index.html	styles.css
+[10:01:17] test
+// ♥ rm commands.text
+[10:01:27] test
+// ♥ ls
+commands.txt	index.html	styles.css
+[10:01:29] test
+// ♥ cp index.html index_2.html
+[10:01:44] test
+// ♥ ls
+commands.txt	index.html	index_2.html	styles.css
+[10:01:45] test
+// ♥ cd ..
+[10:01:52] desktop
+// ♥ mkdir destination
+[10:04:31] desktop
+// ♥ mv index_2.html destination
+mv: rename index_2.html to destination/index_2.html: No such file or directory
+[10:06:25] desktop
+// ♥ cd test
+[10:06:38] test
+// ♥ mv index_2.html destination
+[10:06:54] test
+// ♥ cd ..
+[10:07:01] desktop
+// ♥ cd destination
+[10:07:05] destination
+// ♥ ls
+[10:07:07] destination
+// ♥ cd ..
+[10:07:23] desktop
+// ♥ cd test
+[10:07:25] test
+// ♥ ls
+commands.txt	destination	index.html	styles.css
+[10:07:27] test
+// ♥ mv destination index_2.html
+[10:07:57] test
+// ♥ ls
+commands.txt	index.html	index_2.html	styles.css
+[10:07:58] test
+// ♥ mv index_2.html /destination
+mv: rename index_2.html to /destination: Permission denied
+[10:09:18] test
+// ♥ sudo mv index_2.html /destination
+Password:
+[10:09:40] test
+// ♥ cd..
+-bash: cd..: command not found
+[10:09:45] test
+// ♥ cd ..
+[10:09:47] desktop
+// ♥ pwd destination
+/Users/mathengel/desktop
+[10:09:53] desktop
+// ♥ cd destination
+[10:10:00] destination
+// ♥ ls
+[10:10:01] destination
+// ♥ cd ..
+[10:10:10] desktop
+// ♥ cd test
+[10:10:12] test
+// ♥ ls
+commands.txt	index.html	styles.css
+[10:10:13] test
+// ♥ touch index_2.html
+[10:11:27] test
+// ♥ mv index_2.html ../
+[10:11:44] test
+// ♥ cd ..
+[10:11:47] desktop
+// ♥ ls
+Desktop 5.15.16
+IMG_1257.JPG
+IMG_1258.JPG
+IMG_2504.JPG
+brita price is right - Google Search.htm
+brita price is right - Google Search_files
+destination
+index_2.html
+test
+[10:11:48] desktop
+// ♥ mv index_2.html /destination
+mv: rename index_2.html to /destination: Permission denied
+[10:12:09] desktop
+// ♥ mv index_2.html destination
+[10:12:47] desktop
+// ♥ ls
+Desktop 5.15.16
+IMG_1257.JPG
+IMG_1258.JPG
+IMG_2504.JPG
+brita price is right - Google Search.htm
+brita price is right - Google Search_files
+destination
+test
+[10:12:52] desktop
+// ♥ cd destination
+[10:13:07] destination
+// ♥ ls
+index_2.html
+[10:13:08] destination
+// ♥ cd ..
+[10:13:28] desktop
+// ♥ cd test
+[10:13:30] test
+// ♥ rm styles.css
+[10:13:39] test
+// ♥ ls
+commands.txt	index.html
+[10:13:40] test
+// ♥ cd ..
+[10:13:58] desktop
+// ♥ rm -rf destination
+[10:14:14] desktop
+// ♥ ls -a
+.
+..
+.DS_Store
+.localized
+Desktop 5.15.16
+IMG_1257.JPG
+IMG_1258.JPG
+IMG_2504.JPG
+brita price is right - Google Search.htm
+brita price is right - Google Search_files
+test
+[10:23:33] desktop
+// ♥ cd ..
+[10:23:41] ~
+// ♥ pwd
+/Users/mathengel
+[10:23:43] ~
+// ♥ ls -a
+.				.netrc
+..				.npm
+.CFUserTextEncoding		.profile
+.DS_Store			.rbenv
+.Trash				.rvm
+.bash_history			.sqlite_history
+.bash_profile			.ssh
+.bash_profile.bak		.subversion
+.bashrc				.viminfo
+.config				.zlogin
+.cups				.zshrc
+.gem				Applications
+.gemrc				CodingDojo
+.gitconfig			Creative Cloud Files
+.gitconfig.bak			Creative Cloud Files (unknown)
+.gitconfig.bak.0		Desktop
+.gitconfig.bak.1		Development
+.gitconfig.swp			Documents
+.gitignore			Downloads
+.gnupg				Library
+.gnutls				Movies
+.irbrc				Music
+.learn-config			Pictures
+.learn-open-tmp			Public
+.learn-submit-tmp		Related
+.mkshrc				Sites
+.mysql_history			hello_world.rb
+[10:23:49] ~
+// ♥ defaults write com.apple.finder AppleShowAllFiles YES
+[10:25:44] ~
+// ♥ defaults write com.apple.finder AppleShowAllFiles NO
+[10:29:51] ~
+// ♥ cd desktop
+[10:31:03] desktop
+// ♥ cd ..
+[10:31:10] ~
+// ♥ cd desktop
+[10:31:19] desktop
+// ♥ cd test
+[10:31:22] test
+// ♥ open commands.txt
+[10:31:29] test
+// ♥
